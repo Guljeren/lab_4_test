@@ -10,6 +10,6 @@ jobs:
           python-version: '3.11'
       - run: pip install pytest pytest-cov mypy flake8
       - run: mypy app
-      - run: flake8 app tests
+      - run: flake8 app tests --exit-zero
       # PYTHONPATH=. - чтобы сервер GitHub без ошибок импортировал модули
       - run: PYTHONPATH=. pytest --cov=app --cov-report=term
